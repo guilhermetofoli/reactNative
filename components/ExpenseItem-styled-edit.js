@@ -29,5 +29,11 @@ export default HomeScreen(){
             return;
             
         }
+
+        // Validação para verificar valor númerico
+        if(isNaN((parseFloat(valor)))){
+            Alert.alert('Erro', 'Valor deve ser numérico!');
+            return;
+        }
     }
 }
