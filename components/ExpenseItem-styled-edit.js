@@ -79,9 +79,14 @@ export default function HomeScreen(){
     };
 
     //Cálculo do valor de gastos
-    const totalGasto = gastos.reduce((acc, item) => acc + parseFloat(item.valor), 0).toFixed(2); // Soma dos valores
+    const totalGasto = gastos.reduce((acc, item) => acc + parseFloat(item.valor), 0).toFixed(2); // Soma dos valores e formata em 2 casas decimais
+
+    return(
+        <View style={styles.container}>
+            <Text style={styles.titulo}>Controle de Gastos</Text>
+            </View>
+    );
 
 
-    }
 
-
+};
