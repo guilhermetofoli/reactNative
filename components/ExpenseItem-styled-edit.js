@@ -78,6 +78,10 @@ export default function HomeScreen(){
         setEditandoId(id); // Define o ID do item que está sendo editado
     };
 
+    //Cálculo do valor de gastos
+    const totalGasto = gastos.reduce((acc, item) => acc + parseFloat(item.valor), 0).toFixed(2); // Soma dos valores
+
+
     }
 
 
