@@ -93,6 +93,17 @@ export default function HomeScreen(){
             onChangeText={setDescricao}
             />
 
+            {/*Campo para entrada de valor*/}
+            <TextInput
+            style={styles.input}
+            placeholder="Valor do gasto"
+            value={valor}
+            onChangeText={setValor}
+            keyboardType="numeric"
+            />
+
+
+
 
             </View>
     );
@@ -113,4 +124,5 @@ const styles = StyleSheet.create({
     input: {
 
     },
-    
+
+});
