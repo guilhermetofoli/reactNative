@@ -35,5 +35,27 @@ export default HomeScreen(){
             Alert.alert('Erro', 'Valor deve ser numérico!');
             return;
         }
+
+        if(editandoId){ 
+            const gastosAtualizados = gastos.map((Item) => 
+            // Atualiza o gasto existente com base no ID
+            Item.Id === editandoId 
+            ? {...Item, descricao, valor: parseFloat(valor).toFixed(2)} : Item ); // Atualiza o item com nova descrição e valor formatado
+        
+        setGastos(gastosAtualizados); // Atualiza a lista de gastos com o item editado
+        setEditandoId(null); // Limpa o estado de edição
+        } else{
+            // Adiciona um novo gasto à lista
+            const novoGasto = {
+                id: Date.now().toString(), // Gera um ID único com base no timestamp
+                descricao,                 // Descrição do gasto
+                valor: parseFloat(valor).toFixed(2) // Formata o valor para 2 casas decimais
+            };
+            setGastos([...gastos, novoGasto]);
+        }
+        // Limpar os campos do formulário após adicionar ou atualizar
+        setDescricao(""); // Limpa o campo de descrição
+        setValor(""); // Limpa o campo de valor
     }
 }
+
