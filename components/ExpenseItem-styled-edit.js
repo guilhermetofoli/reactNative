@@ -84,9 +84,33 @@ export default function HomeScreen(){
     return(
         <View style={styles.container}>
             <Text style={styles.titulo}>Controle de Gastos</Text>
+
+            {/*Campo para entrada da descrição*/}
+            <TextInput
+            style={styles.input}
+            placeholder="Descrição do gasto"
+            value={descricao}
+            onChangeText={setDescricao}
+            />
+
+
             </View>
     );
 
-
-
 };
+
+// Estilos aplicados a interface
+
+const styles = StyleSheet.create({
+    container: {
+
+    },
+
+    titulo: {
+
+    },
+
+    input: {
+
+    },
+    
