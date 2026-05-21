@@ -71,5 +71,13 @@ export default function HomeScreen(){
             }
     };
         
-}
+
+    const editarGasto = (id) => {
+        setDescricao(item.descricao); // Preenche o campo de descrição com a descrição do item a ser editado
+        setValor(item.valor);
+        setEditandoId(id); // Define o ID do item que está sendo editado
+    };
+
+    }
+
 
